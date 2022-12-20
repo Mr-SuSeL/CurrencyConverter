@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Konwerter Walut</title>
+</head>
+
+<body class="body">
+    <div id="container">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Konwerter Walut</legend>
+                <p>
+                    <label>
+                        <span class = "form__labelText">
+                        Wpisz wartość portfela w PLN i wybierz walutę obcą do wymiany:
+                    </span>
+                        <input class="form__fieldLabel js-numberToConverse" type="number" name="numberToConverse" step="0.01" min="1" max="10000" required>
+                    </label>
+                </p>
+  
+                <p>
+                    <label>
+                        <input type="radio" name="radio" class="js-radio1__usd"> USD
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="radio" class="js-radio2__eur"> EUR
+                    </label>
+                </p>
+                <p><label>
+                        <input type="radio" name="radio" class="js-radio3__gbp"> GBP
+                    </label>
+                </p>
+                <label>
+                    <input type="radio" name="radio" class="js-radio4__chf"> CHF
+                </label>
+                </p>
+
+
+
+                <p>
+                    <label>
+                        <span class = "form__labelText">
+                        Podaj kurs wymiany danej waluty w PLN korzystając ze ściągi:
+                    </span>
+                        <input class="form__fieldLabel js-conversedNumber" type="number" name="conversedNumber" step="0.01" min="1" max="10000" required>
+                    </label>
+                </p>
+               
+                <p>
+                    <button class="form__button js-submit">Oblicz</button>
+                    <button type="reset" class="form__button js-reset">Wyczyść</button>
+                </p>
+
+                <p>
+    
+                        Wynik: <strong class="js-result">Wynik</strong>
+                    </span>
+ 
+                </p>
+
+            </fieldset>
+
+        </form>
+        <p>Ściąga z NBP:</p>
+        <p>
+        <div id="cinkciarzPlWidgetNbp"></div>
+        <script src="https://cinkciarz.pl/widget/cinkciarz.widget.js"></script>
+        </p>
+
+
+
+    </div>
+</body>
+
+</html>
