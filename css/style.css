@@ -20,10 +20,13 @@ html {
 .body {
     font-family: "Lato", sans-serif;
     line-height: 1.25;
+    background-image: url(../img/tlo2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .form {
-background-color: rgb(237, 247, 192);
+    background-color: rgb(237, 247, 192);
 }
 
 .form__labelText {
@@ -49,21 +52,21 @@ background-color: rgb(237, 247, 192);
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
-    border: 2px solid rgb(83, 105, 82); 
-    background-color:rgba(128, 255, 0, 0.4);
+    border: 2px solid rgb(83, 105, 82);
+    background-color: rgba(128, 255, 0, 0.4);
     color: rgb(83, 105, 82);
     font-weight: bold;
 }
 
 .form__button:hover {
-    background-color:rgba(128, 255, 0, 0.85);
+    background-color: rgba(128, 255, 0, 0.85);
     color: rgb(4, 54, 15);
 }
 
-.form__button:active{
-    background-color:rgba(128, 255, 0, 0.99);
+.form__button:active {
+    background-color: rgba(128, 255, 0, 0.99);
     color: rgb(2, 24, 6);
-    border: 2px solid rgb(2, 24, 6); 
+    border: 2px solid rgb(2, 24, 6);
 }
 
 .form__fieldset {
@@ -79,15 +82,14 @@ background-color: rgb(237, 247, 192);
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #ccc;
-    background-color:rgba(128, 255, 0, 0.22);
+    background-color: rgba(128, 255, 0, 0.22);
     color: rgb(4, 54, 15);
 }
 
 .form__fieldLabel:required {
-    background-color:beige;
+    background-color: beige;
 }
 
-.form__fieldLabel:out-of-range{
-    background-color:rgb(214, 122, 93);
+.form__fieldLabel:out-of-range {
+    background-color: rgb(214, 122, 93);
 }
-
