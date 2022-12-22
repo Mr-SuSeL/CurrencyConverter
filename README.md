@@ -1,5 +1,5 @@
 # CurrencyConverter
-App to convert chosen currency to PLN for studies
+App to convert chosen currency to PLN. App for studies
 
 ## Demo
 
