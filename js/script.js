@@ -1,51 +1,52 @@
-let numberToConverse = document.querySelector(".js-numberToConverse");
-let currencyCourse = document.querySelector(".js-conversedNumber");
-let result = document.querySelector(".js-result");
+let numberToConverse = document.querySelector(".js-numberToConverse"); //wartość wpisana przez użytkownika
 
-let formElement = document.querySelector(".js-form");
+let currencyElement = document.querySelector ("select.form__field"); //wybor waluty
 
-let numberToConverseVal = numberToConverse.value;
-let currencyCourseVal = currencyCourse.value;
+let counterElement = document.querySelector(".js-counter"); //oblicz
 
-let radioElement1 = document.querySelector(".js-radio1__usd");
-let radioElement2 = document.querySelector(".js-radio2__eur");
-let radioElement3 = document.querySelector(".js-radio3__gbp");
-let radioElement4 = document.querySelector(".js-radio4__chf");
+let formElement = document.querySelector(".js-form"); //cały formularz
+
+// let numberToConverseVal = numberToConverse.value;
+// let currencyCourseVal = currencyCourse.value;
+
 
 let button = document.querySelector(".js-submit");
 
-let currency;
-let resultCalc;
+
+
+const rateUSD = 4.4018;
+const rateEUR = 4.6899;
+const rateGBP = 5.2957;
+const rateCHF = 4.7679;
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    
-    let currencyCourseValNumber = +currencyCourseVal;
-    let calc;
-    let Q = +currencyCourse.value;
-    let Curr = +numberToConverse.value;
-    calc = Q * Curr;
 
-    if (radioElement1.checked) {
-        currency = "USD";
-    }
-    else if (radioElement2.checked) {
-        currency = "EUR";
-    }
-    else if (radioElement3.checked) {
-        currency = "GBP";
-    }
-    else if (radioElement4.checked) {
-        currency = "CHF";
-    }
-    else {
-        currency = "Brak";
-    }
-    let calc2 = calc.toFixed(2);
+    let amount = +numberToConverse.value;
+let currency = currencyElement.value;
+let result;
 
-    resultCalc = calc2 + " " + currency;
+    switch (currency) {
+        case "USD":
+            result = amount / rateUSD;
+            break;
+        
+        case "EUR": 
+            result = amount / rateEUR;
+            break;
 
-    result.innerText = resultCalc;
+        case "GBP":
+            result = amount / rateGBP;
+            break;
+
+        case "CHF": 
+            result = amount / rateCHF;
+            break;
+    }
+counterElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
+//result;
+//`${result} ${currency}`;
+//`${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
 
 });
 
